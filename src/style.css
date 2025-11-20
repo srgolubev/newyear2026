@@ -302,8 +302,6 @@ ul {
   /* Ensure logos scale properly */
   border-radius: 0;
   /* Remove rounding */
-  /* Filter to make white logos blue (approximate #3742FA) */
-  filter: invert(18%) sepia(96%) saturate(3876%) hue-rotate(232deg) brightness(95%) contrast(106%);
 }
 
 .nav {
