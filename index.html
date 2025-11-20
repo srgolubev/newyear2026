@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Новогодний ЗАБЕГ 2026 | Лужники</title>
+    <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body>
+    <canvas id="snow-canvas"></canvas>
+
+    <header class="header">
+        <div class="container header__container">
+            <div class="header__logos">
+                <div class="logo">ЗАБЕГ 2026</div>
+                <div class="partner-logos">
+                    <img src="/public/images/logo_dep.png" alt="Департамент спорта" class="partner-logo" />
+                    <img src="/public/images/logo_ms.png" alt="Московский спорт" class="partner-logo" />
+                </div>
+            </div>
+
+            <button class="burger-btn" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav" id="nav">
+                <a href="#about">О событии</a>
+                <a href="#distances">Дистанции</a>
+                <a href="#program">Программа</a>
+                <a href="#faq">FAQ</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Переключить тему">
+                    <svg class="moon-icon" viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun-icon" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <a href="https://grom.place/" class="btn btn--small mobile-only"
+                    target="_blank"><span>Регистрация</span></a>
+            </nav>
+            <a href="https://grom.place/" class="btn btn--small desktop-only"
+                target="_blank"><span>Регистрация</span></a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero__bg-decor">
+                <img src="/public/images/snowflake.webp" class="decor-snowflake" alt="" />
+            </div>
+            <div class="container hero__container">
+                <div class="hero__content fade-in">
+                    <h1 class="hero__title">Встречай 2026<br>на бегу!</h1>
+                    <p class="hero__subtitle">31 декабря, Лужники. Самый атмосферный старт года.</p>
+                    <a href="https://grom.place/" class="btn btn--large"
+                        target="_blank"><span>Зарегистрироваться</span></a>
+                </div>
+                <div class="hero__image-wrapper fade-in delay-1">
+                    <img src="/public/images/hero.png" alt="Новогодний забег" class="hero__image" />
+                </div>
+            </div>
+            <div class="hero__buildings">
+                <img src="/public/images/buildings.webp" alt="" />
+            </div>
+        </section>
+
+        <section id="about" class="section about">
+            <div class="container">
+                <h2 class="section-title fade-in">О событии</h2>
+                <div class="about__content fade-in">
+                    <p>Это не просто соревнование, это настоящий праздник спорта и новогоднего настроения. Мы собираемся
+                        в Лужниках, чтобы проводить старый год и зарядиться энергией на новый 2026-й!</p>
+                    <div class="features">
+                        <div class="feature-item">
+                            <div class="feature-icon-wrapper">
+                                <svg class="feature-icon-svg" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 2V22M2 12H22M4.92893 4.92893L19.0711 19.0711M4.92893 19.0711L19.0711 4.92893"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                    <circle cx="12" cy="12" r="3" fill="currentColor" fill-opacity="0.1" />
+                                </svg>
+                            </div>
+                            <h3>Атмосфера</h3>
+                            <p>Праздничные огни, музыка и тысячи единомышленников.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon-wrapper">
+                                <svg class="feature-icon-svg" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18 8H6V16C6 18.2091 7.79086 20 10 20H14C16.2091 20 18 18.2091 18 16V8Z"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M18 10H20C21.1046 10 22 10.8954 22 12V13C22 14.1046 21.1046 15 20 15H18"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M10 4V2M14 4V2" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <h3>Комфорт</h3>
+                            <p>Тёплые раздевалки, горячий чай и удобная навигация.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon-wrapper">
+                                <svg class="feature-icon-svg" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="15" r="5" stroke="currentColor" stroke-width="2" />
+                                    <path d="M12 15L12 13M12 15L13.5 16.5M12 15L10.5 16.5" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" />
+                                    <path d="M8.21 11.21L7 4H17L15.79 11.21" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M7 4L12 11L17 4" stroke="currentColor" stroke-width="1"
+                                        stroke-opacity="0.5" />
+                                </svg>
+                            </div>
+                            <h3>Медали</h3>
+                            <p>Уникальная медаль финишера каждому участнику.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="distances" class="section distances">
+            <div class="container">
+                <h2 class="section-title fade-in">Дистанции</h2>
+                <div class="cards-grid">
+                    <div class="card fade-in">
+                        <div class="card__image-wrapper">
+                            <img src="/public/images/1km.png" alt="1 км" class="card__image" />
+                        </div>
+                        <div class="card__content">
+                            <h3>1 КМ — Семейный</h3>
+                            <p>Идеально для новичков и семей с детьми. Бежим в удовольствие, без учета времени.</p>
+                        </div>
+                    </div>
+                    <div class="card fade-in delay-1">
+                        <div class="card__image-wrapper">
+                            <img src="/public/images/5km.png" alt="5 км" class="card__image" />
+                        </div>
+                        <div class="card__content">
+                            <h3>5 КМ — Спортивный</h3>
+                            <p>Для тех, кто хочет проверить себя. Фиксация времени, пейсмейкеры и дух соперничества.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section family">
+            <div class="container family__container">
+                <div class="family__text fade-in">
+                    <h2 class="section-title">Семейный формат</h2>
+                    <p>Мы подготовили особую программу для самых маленьких спортсменов. Детская зона с аниматорами,
+                        безопасная трасса и море веселья.</p>
+                    <ul class="list">
+                        <li>Аниматоры в костюмах</li>
+                        <li>Детские стартовые пакеты</li>
+                        <li>Сладкие подарки на финише</li>
+                    </ul>
+                </div>
+                <div class="family__image-wrapper fade-in delay-1">
+                    <img src="/public/images/kids.png" alt="Детская зона" class="family__image" />
+                </div>
+            </div>
+        </section>
+
+        <section id="program" class="section program">
+            <div class="container">
+                <h2 class="section-title fade-in">Программа</h2>
+                <div class="timeline fade-in">
+                    <div class="timeline__item">
+                        <span class="time">18:00</span>
+                        <span class="event">Открытие стартового городка, выдача номеров</span>
+                    </div>
+                    <div class="timeline__item">
+                        <span class="time">19:30</span>
+                        <span class="event">Разминка для детей и старт на 1 км</span>
+                    </div>
+                    <div class="timeline__item">
+                        <span class="time">20:30</span>
+                        <span class="event">Общая разминка</span>
+                    </div>
+                    <div class="timeline__item">
+                        <span class="time">21:00</span>
+                        <span class="event">Старт на 5 км</span>
+                    </div>
+                    <div class="timeline__item">
+                        <span class="time">22:30</span>
+                        <span class="event">Награждение победителей</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section warm-zone">
+            <div class="container warm-zone__container">
+                <div class="warm-zone__image-wrapper fade-in">
+                    <img src="/public/images/warm.png" alt="Тёплая зона" class="warm-zone__image" />
+                </div>
+                <div class="warm-zone__text fade-in delay-1">
+                    <h2 class="section-title">Тепло и уютно</h2>
+                    <p>После финиша вас ждут тёплые шатры, горячий чай с пряностями и уютная зона отдыха. Делитесь
+                        эмоциями, делайте фото и наслаждайтесь атмосферой.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="location" class="section location">
+            <div class="container">
+                <h2 class="section-title fade-in">Локация</h2>
+                <p class="location__desc fade-in">Олимпийский комплекс «Лужники» — сердце спортивной Москвы.</p>
+                <div class="location__image-wrapper fade-in">
+                    <img src="/public/images/luzhniki.png" alt="Лужники" class="location__image" />
+                </div>
+            </div>
+        </section>
+
+        <section class="section cta">
+            <div class="container cta__container fade-in">
+                <h2>Готов начать год активно?</h2>
+                <p>Подарок всем зарегистрированным до 15 декабря!</p>
+                <a href="https://grom.place/" class="btn btn--large btn--white"
+                    target="_blank"><span>Зарегистрироваться</span></a>
+            </div>
+        </section>
+
+        <section class="section faq">
+            <div class="container">
+                <h2 class="section-title fade-in">Частые вопросы</h2>
+                <div class="accordion fade-in">
+                    <div class="accordion__item">
+                        <button class="accordion__header">Нужна ли медицинская справка?</button>
+                        <div class="accordion__content">Да, для дистанции 5 км справка обязательна. Для 1 км достаточно
+                            расписки.</div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__header">Где получить стартовый пакет?</button>
+                        <div class="accordion__content">Выдача пакетов будет проходить 29-30 декабря в нашем офисе и 31
+                            декабря на месте старта.</div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__header">Можно ли бежать с собакой?</button>
+                        <div class="accordion__content">К сожалению, в целях безопасности участие с животными запрещено.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__col">
+                <div class="logo">ЗАБЕГ 2026</div>
+                <p>© 2025 Все права защищены</p>
+            </div>
+            <div class="footer__col">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Оферта</a>
+            </div>
+            <div class="footer__col">
+                <p>Контакты: info@nyrun2026.ru</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
