@@ -789,8 +789,17 @@ ul {
   }
 
   .partner-logos {
-    display: none;
-    /* Hide partner logos on mobile if too crowded, or adjust */
+    display: flex;
+    padding-left: 12px;
+    gap: 8px;
+  }
+
+  .partner-logo {
+    height: 28px;
+  }
+
+  .header__logos {
+    gap: 12px;
   }
 }
 
