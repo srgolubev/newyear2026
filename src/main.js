@@ -182,4 +182,19 @@ document.addEventListener('DOMContentLoaded', () => {
         htmlElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
     });
+
+    // Cookie Consent
+    const cookieBanner = document.getElementById('cookie-banner');
+    const cookieAcceptBtn = document.getElementById('cookie-accept');
+
+    if (!localStorage.getItem('cookie_consent')) {
+        setTimeout(() => {
+            cookieBanner.classList.add('visible');
+        }, 1000);
+    }
+
+    cookieAcceptBtn.addEventListener('click', () => {
+        localStorage.setItem('cookie_consent', 'true');
+        cookieBanner.classList.remove('visible');
+    });
 });
