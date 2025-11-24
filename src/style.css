@@ -110,7 +110,7 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-[data-theme="dark"] .partner-logo {
+[data-theme="dark"] .partner-logo:not(.partner-logo--no-filter) {
   filter: brightness(0) invert(1);
   /* Make logos white in dark mode */
 }
