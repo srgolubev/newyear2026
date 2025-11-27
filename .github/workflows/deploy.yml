@@ -17,7 +17,7 @@ jobs:
         port: 22
         script: |
           # Переходим в папку проекта (УКАЖИТЕ ПРАВИЛЬНЫЙ ПУТЬ)
-          cd /var/www/newyear2026 
+          cd /var/www/newyear.sport.mos.ru 
           
           # Обновляем код
           git pull
