@@ -5,10 +5,10 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: 'index.html',
-                404: 'public/404.html',
-                403: 'public/403.html',
-                500: 'public/500.html',
-                '50x': 'public/50x.html'
+                404: '404.html',
+                403: '403.html',
+                500: '500.html',
+                '50x': '50x.html'
             }
         }
     }
