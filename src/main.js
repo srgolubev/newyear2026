@@ -197,4 +197,24 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('cookie_consent', 'true');
         cookieBanner.classList.remove('visible');
     });
+
+    // Clean URL from tracking parameters (fbclid, etc.)
+    if (window.history.replaceState) {
+        const url = new URL(window.location.href);
+        const params = new URLSearchParams(url.search);
+        const keysToRemove = ['fbclid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'yclid'];
+
+        let hasChanges = false;
+        keysToRemove.forEach(key => {
+            if (params.has(key)) {
+                params.delete(key);
+                hasChanges = true;
+            }
+        });
+
+        if (hasChanges) {
+            url.search = params.toString();
+            window.history.replaceState({}, document.title, url.toString());
+        }
+    }
 });
