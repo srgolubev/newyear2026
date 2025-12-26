@@ -19,6 +19,9 @@ jobs:
           # Переходим в папку проекта (УКАЖИТЕ ПРАВИЛЬНЫЙ ПУТЬ)
           cd /var/www/newyear.sport.mos.ru 
           
+          # Сбрасываем локальные изменения (лечим ошибку с package-lock.json)
+          git reset --hard
+
           # Обновляем код
           git pull
           
